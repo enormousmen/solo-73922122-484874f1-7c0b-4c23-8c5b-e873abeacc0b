@@ -18,7 +18,7 @@ services:
     volumes:
       - proxy-cache:/cache   # complete packages survive restarts
     ports:
-      - "8080:8000"          # download API + /docs purge entry
+      - "8080:8000"          # download + purge + build-lease API, /docs
     depends_on:
       - origin
 
